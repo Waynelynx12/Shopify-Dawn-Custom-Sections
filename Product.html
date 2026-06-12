@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barrier Repair Serum — Lumière Derme</title>
+  <meta name="description" content="Ceramide complex that rebuilds the skin barrier in 72 hours. Clinically tested. Dermatologist approved." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+</head>
+
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+       In Shopify: sections/header.liquid
+       ================================================ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Lumière <span>Derme</span></a>
+        <ul class="nav__links">
+          <li><a href="#">Skincare</a></li>
+          <li><a href="#">Serums</a></li>
+          <li><a href="#">Treatments</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="#" class="text-sm text-uppercase">Search</a>
+          <a href="#" class="text-sm text-uppercase">
+            Cart <span class="nav__cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       SECTION 1: PRODUCT HERO
+       In Shopify: sections/main-product.liquid
+       Schema: images, title, price, variants
+       ================================================ -->
+  <section class="section product-hero">
+    <div class="container">
+      <div class="product-hero__inner">
+
+        <!-- Product Images -->
+        <div class="product-hero__gallery">
+          <div class="product-hero__main-image">
+            <img src="assets/images/product-1.jpg" alt="Barrier Repair Serum" id="mainProductImage" />
+          </div>
+          <div class="product-hero__thumbnails">
+            <button class="product-hero__thumb active" data-image="assets/images/product-1.jpg">
+              <img src="assets/images/product-1.jpg" alt="View 1" />
+            </button>
+            <button class="product-hero__thumb" data-image="assets/images/product-2.jpg">
+              <img src="assets/images/product-2.jpg" alt="View 2" />
+            </button>
+            <button class="product-hero__thumb" data-image="assets/images/product-3.jpg">
+              <img src="assets/images/product-3.jpg" alt="View 3" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-hero__info">
+          <p class="text-uppercase text-accent">Serums</p>
+          <h1 class="product-hero__title heading-lg">Barrier Repair Serum</h1>
+
+          <!-- Trust Badges Strip -->
+          <!-- In Shopify: snippets/trust-badges.liquid -->
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <span class="trust-badge__icon">✓</span>
+              <span class="trust-badge__text text-xs">Dermatologist Tested</span>
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge__icon">✓</span>
+              <span class="trust-badge__text text-xs">Fragrance Free</span>
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge__icon">✓</span>
+              <span class="trust-badge__text text-xs">Cruelty Free</span>
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge__icon">✓</span>
+              <span class="trust-badge__text text-xs">Free Shipping Over $75</span>
+            </div>
+          </div>
+
+          <p class="product-hero__price">$78.00</p>
+
+          <p class="product-hero__desc text-secondary">Ceramide complex that rebuilds the skin barrier in 72 hours. Clinically tested on sensitive and compromised skin. Zero fragrance. Zero fillers.</p>
+
+          <!-- Variant Selector -->
+          <!-- In Shopify: snippets/variant-selector.liquid -->
+          <div class="variant-selector">
+            <p class="text-sm text-uppercase" style="margin-bottom: 0.5rem;">Size</p>
+            <div class="variant-selector__options">
+              <button class="variant-option" data-value="30ml">30ml</button>
+              <button class="variant-option active" data-value="50ml">50ml</button>
+              <button class="variant-option" data-value="100ml">100ml</button>
+            </div>
+          </div>
+
+          <!-- Add To Cart -->
+          <button class="btn btn--primary btn--full product-hero__atc" id="mainAtcButton">
+            Add to Cart — $78.00
+          </button>
+
+          <p class="text-xs text-secondary" style="margin-top: 0.75rem; text-align: center;">Free returns within 30 days. No questions asked.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SECTION 2: TABBED PRODUCT DESCRIPTION
+       In Shopify: sections/product-tabs.liquid
+       Schema: tab titles and content via metafields
+       ================================================ -->
+  <section class="section--sm product-tabs">
+    <div class="container--narrow">
+
+      <div class="tabs">
+        <div class="tabs__nav">
+          <button class="tabs__trigger active" data-tab="ingredients">Ingredients</button>
+          <button class="tabs__trigger" data-tab="howtouse">How To Use</button>
+          <button class="tabs__trigger" data-tab="results">Clinical Results</button>
+          <button class="tabs__trigger" data-tab="reviews">Reviews</button>
+        </div>
+
+        <div class="tabs__content">
+
+          <div class="tab-panel active" id="tab-ingredients">
+            <h3 class="heading-sm" style="margin-bottom: 1rem;">Key Ingredients</h3>
+            <div class="ingredient-grid">
+              <div class="ingredient-card">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Primary Active</p>
+                <h4>Ceramide NP Complex</h4>
+                <p class="text-sm text-secondary">Restores lipid barrier integrity. Clinically shown to reduce transepidermal water loss by 43% in 72 hours.</p>
+              </div>
+              <div class="ingredient-card">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Supporting Active</p>
+                <h4>Cholesterol</h4>
+                <p class="text-sm text-secondary">Works synergistically with ceramides to mimic the natural skin barrier ratio for maximum repair efficacy.</p>
+              </div>
+              <div class="ingredient-card">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Humectant</p>
+                <h4>Sodium Hyaluronate</h4>
+                <p class="text-sm text-secondary">Low molecular weight HA that penetrates below the surface to deliver hydration at the cellular level.</p>
+              </div>
+              <div class="ingredient-card">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Calming Agent</p>
+                <h4>Panthenol B5</h4>
+                <p class="text-sm text-secondary">Reduces redness and accelerates barrier recovery in compromised or post-treatment skin.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-howtouse">
+            <h3 class="heading-sm" style="margin-bottom: 1rem;">Application Protocol</h3>
+            <div class="how-to-steps">
+              <div class="how-to-step">
+                <span class="how-to-step__number">01</span>
+                <div>
+                  <h4>Cleanse</h4>
+                  <p class="text-sm text-secondary">Apply to clean dry skin. Pat dry gently. Do not rub.</p>
+                </div>
+              </div>
+              <div class="how-to-step">
+                <span class="how-to-step__number">02</span>
+                <div>
+                  <h4>Apply</h4>
+                  <p class="text-sm text-secondary">Dispense 3 to 4 drops. Press into skin using fingertips. Start at centre of face and work outward.</p>
+                </div>
+              </div>
+              <div class="how-to-step">
+                <span class="how-to-step__number">03</span>
+                <div>
+                  <h4>Layer</h4>
+                  <p class="text-sm text-secondary">Allow 60 seconds before applying moisturiser. Can be used morning and evening.</p>
+                </div>
+              </div>
+              <div class="how-to-step">
+                <span class="how-to-step__number">04</span>
+                <div>
+                  <h4>Protect</h4>
+                  <p class="text-sm text-secondary">Always follow with SPF 30 or higher in the morning routine.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-results">
+            <h3 class="heading-sm" style="margin-bottom: 1rem;">Clinical Study Results</h3>
+            <div class="results-grid">
+              <div class="result-stat">
+                <p class="result-stat__number">43%</p>
+                <p class="text-sm text-secondary">Reduction in transepidermal water loss after 72 hours</p>
+              </div>
+              <div class="result-stat">
+                <p class="result-stat__number">89%</p>
+                <p class="text-sm text-secondary">Of participants reported visibly calmer skin after 2 weeks</p>
+              </div>
+              <div class="result-stat">
+                <p class="result-stat__number">94%</p>
+                <p class="text-sm text-secondary">Reported improved skin texture after 4 weeks of daily use</p>
+              </div>
+              <div class="result-stat">
+                <p class="result-stat__number">100%</p>
+                <p class="text-sm text-secondary">Suitable for sensitive and post-procedure skin types</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-reviews">
+            <h3 class="heading-sm" style="margin-bottom: 1rem;">Customer Reviews</h3>
+            <div class="reviews-list">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__author">Sarah M.</p>
+                    <p class="text-xs text-secondary">Verified Purchase</p>
+                  </div>
+                  <p class="review-card__stars">★★★★★</p>
+                </div>
+                <p class="text-sm text-secondary">My skin barrier was completely destroyed after overusing actives. Two weeks on this and the redness is almost entirely gone. Nothing else worked like this.</p>
+              </div>
+              <div class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__author">James T.</p>
+                    <p class="text-xs text-secondary">Verified Purchase</p>
+                  </div>
+                  <p class="review-card__stars">★★★★★</p>
+                </div>
+                <p class="text-sm text-secondary">I was sceptical about the 72 hour claim. By day three my skin genuinely felt different. Smoother, less reactive, less tight in the morning.</p>
+              </div>
+              <div class="review-card">
+                <div class="review-card__header">
+                  <div>
+                    <p class="review-card__author">Priya K.</p>
+                    <p class="text-xs text-secondary">Verified Purchase</p>
+                  </div>
+                  <p class="review-card__stars">★★★★☆</p>
+                </div>
+                <p class="text-sm text-secondary">Texture is lightweight and absorbs fast. No pilling under makeup which is rare for barrier serums. Will repurchase.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       SECTION 3: COMPLEMENTARY PRODUCTS
+       In Shopify: sections/complementary-products.liquid
+       Data source: product metafields (no app required)
+       ================================================ -->
+  <section class="section complementary-products">
+    <div class="container">
+      <p class="text-uppercase text-accent text-center" style="margin-bottom: 0.5rem;">Complete The Routine</p>
+      <h2 class="heading-md text-center" style="margin-bottom: 2.5rem;">Pairs Well With</h2>
+      <div class="complementary-grid">
+
+        <div class="complementary-card">
+          <img src="assets/images/product-2.jpg" alt="Clarifying BHA Toner" />
+          <div class="complementary-card__info">
+            <h4>Clarifying BHA Toner</h4>
+            <p class="text-sm text-secondary">Use before serum to prep skin.</p>
+            <div class="complementary-card__footer">
+              <span class="text-sm">$42.00</span>
+              <button class="btn btn--secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="complementary-card">
+          <img src="assets/images/product-3.jpg" alt="Peptide Moisture Barrier Cream" />
+          <div class="complementary-card__info">
+            <h4>Peptide Moisture Barrier Cream</h4>
+            <p class="text-sm text-secondary">Layer on top to lock in serum.</p>
+            <div class="complementary-card__footer">
+              <span class="text-sm">$120.00</span>
+              <button class="btn btn--secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="complementary-card">
+          <img src="assets/images/product-4.jpg" alt="Growth Factor Eye Cream" />
+          <div class="complementary-card__info">
+            <h4>Growth Factor Eye Cream</h4>
+            <p class="text-sm text-secondary">Complete the evening repair ritual.</p>
+            <div class="complementary-card__footer">
+              <span class="text-sm">$110.00</span>
+              <button class="btn btn--secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       STICKY ADD TO CART BAR
+       In Shopify: sections/sticky-atc.liquid
+       Appears after user scrolls past main ATC button
+       ================================================ -->
+  <div class="sticky-atc" id="stickyAtc">
+    <div class="container">
+      <div class="sticky-atc__inner">
+        <div class="sticky-atc__product">
+          <img src="assets/images/product-1.jpg" alt="Barrier Repair Serum" class="sticky-atc__image" />
+          <div>
+            <p class="text-sm" style="font-weight: 500;">Barrier Repair Serum</p>
+            <p class="text-xs text-secondary">50ml</p>
+          </div>
+        </div>
+        <div class="sticky-atc__actions">
+          <p class="sticky-atc__price">$78.00</p>
+          <button class="btn btn--primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       FOOTER
+       In Shopify: sections/footer.liquid
+       ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">Lumière <span style="color: var(--color-secondary);">Derme</span></p>
+      <p class="footer__tagline">Clinical skincare engineered for visible results.</p>
+      <div class="footer__bottom">
+        <span>© 2024 Lumière Derme. All rights reserved.</span>
+        <span>Built by Wayne | Shopify Growth Engineer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
