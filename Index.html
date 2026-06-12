@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — Lumière Derme</title>
+  <meta name="description" content="Shop the Lumière Derme collection. Clinical skincare engineered for visible results." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+</head>
+
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+       In Shopify: sections/header.liquid
+       ================================================ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Lumière <span>Derme</span></a>
+        <ul class="nav__links">
+          <li><a href="#">Skincare</a></li>
+          <li><a href="#">Serums</a></li>
+          <li><a href="#">Treatments</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="#" class="text-sm text-uppercase">Search</a>
+          <a href="#" class="text-sm text-uppercase">
+            Cart <span class="nav__cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       SECTION 1: COLLECTION HERO BANNER
+       In Shopify: sections/collection-hero.liquid
+       Schema: heading, subtext, background colour
+       ================================================ -->
+  <section class="collection-hero">
+    <div class="container">
+      <div class="collection-hero__inner">
+        <p class="text-uppercase text-accent">The Edit</p>
+        <h1 class="collection-hero__heading heading-xl">Clinical Skincare.<br>Visible Results.</h1>
+        <p class="collection-hero__subtext">Every formula is built around one principle: remove what does not work and perfect what does.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SECTION 2: COLLECTION GRID WITH FILTER SIDEBAR
+       In Shopify: sections/main-collection.liquid
+       Uses: Shopify Native Filter API + metafields
+       ================================================ -->
+  <section class="section collection-layout">
+    <div class="container">
+      <div class="collection-layout__inner">
+
+        <!-- Filter Sidebar -->
+        <!-- In Shopify: snippets/filter-sidebar.liquid -->
+        <aside class="filter-sidebar">
+          <div class="filter-sidebar__header">
+            <h2 class="heading-sm">Filter</h2>
+            <button class="filter-sidebar__clear text-sm text-secondary" id="clearFilters">Clear all</button>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__toggle" data-target="skinType">
+              <span>Skin Type</span>
+              <span class="filter-group__icon">+</span>
+            </button>
+            <div class="filter-group__options" id="skinType">
+              <label class="filter-option">
+                <input type="checkbox" value="dry" /> Dry
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="oily" /> Oily
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="combination" /> Combination
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="sensitive" /> Sensitive
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__toggle" data-target="concern">
+              <span>Concern</span>
+              <span class="filter-group__icon">+</span>
+            </button>
+            <div class="filter-group__options" id="concern">
+              <label class="filter-option">
+                <input type="checkbox" value="hydration" /> Hydration
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="brightening" /> Brightening
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="anti-ageing" /> Anti-Ageing
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="acne" /> Acne Control
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__toggle" data-target="priceRange">
+              <span>Price</span>
+              <span class="filter-group__icon">+</span>
+            </button>
+            <div class="filter-group__options" id="priceRange">
+              <label class="filter-option">
+                <input type="checkbox" value="under50" /> Under $50
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="50to100" /> $50 to $100
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="over100" /> Over $100
+              </label>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+
+          <div class="product-grid__toolbar">
+            <p class="text-sm text-secondary">Showing <span id="productCount">8</span> products</p>
+            <select class="product-grid__sort text-sm">
+              <option>Sort: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Best Selling</option>
+            </select>
+          </div>
+
+          <div class="product-grid__items" id="productGrid">
+
+            <!-- Product Card 1 -->
+            <!-- In Shopify: snippets/product-card.liquid -->
+            <div class="product-card" data-skin="dry" data-concern="hydration" data-price="50to100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-1.jpg" alt="Barrier Repair Serum" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="1">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Serums</p>
+                <h3 class="product-card__title">Barrier Repair Serum</h3>
+                <p class="product-card__desc text-sm text-secondary">Ceramide complex that rebuilds the skin barrier in 72 hours.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$78.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card" data-skin="oily" data-concern="acne" data-price="under50">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-2.jpg" alt="Clarifying BHA Toner" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="2">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Toners</p>
+                <h3 class="product-card__title">Clarifying BHA Toner</h3>
+                <p class="product-card__desc text-sm text-secondary">2% salicylic acid formula that clears pores without stripping.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$42.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-skin="combination" data-concern="brightening" data-price="50to100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-3.jpg" alt="Vitamin C Brightening Serum" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="3">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Serums</p>
+                <h3 class="product-card__title">Vitamin C Brightening Serum</h3>
+                <p class="product-card__desc text-sm text-secondary">15% stable Vitamin C that visibly evens skin tone in 4 weeks.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$95.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card" data-skin="sensitive" data-concern="hydration" data-price="over100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-4.jpg" alt="Peptide Moisture Barrier Cream" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="4">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Moisturisers</p>
+                <h3 class="product-card__title">Peptide Moisture Barrier Cream</h3>
+                <p class="product-card__desc text-sm text-secondary">Tripeptide formula that locks in hydration for 48 hours.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$120.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-skin="dry" data-concern="anti-ageing" data-price="over100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-1.jpg" alt="Retinol Renewal Serum" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="5">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Treatments</p>
+                <h3 class="product-card__title">Retinol Renewal Serum</h3>
+                <p class="product-card__desc text-sm text-secondary">Encapsulated 0.5% retinol that resurfaces without irritation.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$145.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-skin="oily" data-concern="brightening" data-price="under50">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-2.jpg" alt="Niacinamide Balancing Serum" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="6">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Serums</p>
+                <h3 class="product-card__title">Niacinamide Balancing Serum</h3>
+                <p class="product-card__desc text-sm text-secondary">10% niacinamide that minimises pores and controls excess sebum.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$48.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card" data-skin="sensitive" data-concern="hydration" data-price="50to100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-3.jpg" alt="Hyaluronic Acid Plumping Serum" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="7">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Serums</p>
+                <h3 class="product-card__title">Hyaluronic Acid Plumping Serum</h3>
+                <p class="product-card__desc text-sm text-secondary">Triple weight hyaluronic acid that plumps from surface to dermis.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$68.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card" data-skin="combination" data-concern="anti-ageing" data-price="over100">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/product-4.jpg" alt="Growth Factor Eye Cream" class="product-card__image" />
+                <button class="product-card__quick-view btn btn--secondary" data-product="8">Quick View</button>
+              </div>
+              <div class="product-card__info">
+                <p class="text-uppercase text-accent" style="font-size: 0.7rem;">Eye Care</p>
+                <h3 class="product-card__title">Growth Factor Eye Cream</h3>
+                <p class="product-card__desc text-sm text-secondary">EGF complex that visibly reduces fine lines around the eye area.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$110.00</span>
+                  <button class="btn btn--primary product-card__atc">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       QUICK VIEW DRAWER
+       In Shopify: snippets/quick-view-drawer.liquid
+       Triggered by product card Quick View button
+       ================================================ -->
+  <div class="quick-view-overlay" id="quickViewOverlay"></div>
+  <div class="quick-view-drawer" id="quickViewDrawer">
+    <button class="quick-view-drawer__close" id="closeQuickView">✕</button>
+    <div class="quick-view-drawer__inner">
+      <div class="quick-view-drawer__image-wrap">
+        <img src="assets/images/product-1.jpg" alt="" id="quickViewImage" />
+      </div>
+      <div class="quick-view-drawer__content">
+        <p class="text-uppercase text-accent" style="font-size: 0.7rem;" id="quickViewCategory">Serums</p>
+        <h2 class="heading-md" id="quickViewTitle">Barrier Repair Serum</h2>
+        <p class="quick-view-drawer__price" id="quickViewPrice">$78.00</p>
+        <p class="text-secondary" id="quickViewDesc">Ceramide complex that rebuilds the skin barrier in 72 hours.</p>
+        <a href="product.html" class="btn btn--primary btn--full" style="margin-top: 1.5rem;">View Full Details</a>
+        <button class="btn btn--secondary btn--full" style="margin-top: 0.75rem;">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       FOOTER
+       In Shopify: sections/footer.liquid
+       ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">Lumière <span style="color: var(--color-secondary);">Derme</span></p>
+      <p class="footer__tagline">Clinical skincare engineered for visible results.</p>
+      <div class="footer__bottom">
+        <span>© 2024 Lumière Derme. All rights reserved.</span>
+        <span>Built by Wayne | Shopify Growth Engineer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
