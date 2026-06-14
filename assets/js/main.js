@@ -149,56 +149,56 @@ const quickViewData = {
     category: 'Serums',
     price: '$78.00',
     desc: 'Ceramide complex that rebuilds the skin barrier in 72 hours.',
-    image: 'assets/images/product-1.jpg'
+    image: 'https://images.unsplash.com/photo-1670201203295-172ff07b1cf8?w=800&auto=format&fit=crop'
   },
   2: {
     title: 'Clarifying BHA Toner',
     category: 'Toners',
     price: '$42.00',
     desc: '2% salicylic acid formula that clears pores without stripping.',
-    image: 'assets/images/product-2.jpg'
+    image: 'https://images.unsplash.com/photo-1629732097571-b042b35aa3ed?w=800&auto=format&fit=crop'
   },
   3: {
     title: 'Vitamin C Brightening Serum',
     category: 'Serums',
     price: '$95.00',
     desc: '15% stable Vitamin C that visibly evens skin tone in 4 weeks.',
-    image: 'assets/images/product-3.jpg'
+    image: 'https://images.unsplash.com/photo-1746227638992-50b1e1e0d96b?w=800&auto=format&fit=crop'
   },
   4: {
     title: 'Peptide Moisture Barrier Cream',
     category: 'Moisturisers',
     price: '$120.00',
     desc: 'Tripeptide formula that locks in hydration for 48 hours.',
-    image: 'assets/images/product-4.jpg'
+    image: 'https://images.unsplash.com/photo-1670201203295-172ff07b1cf8?w=800&auto=format&fit=crop'
   },
   5: {
     title: 'Retinol Renewal Serum',
     category: 'Treatments',
     price: '$145.00',
     desc: 'Encapsulated 0.5% retinol that resurfaces without irritation.',
-    image: 'assets/images/product-1.jpg'
+    image: 'https://images.unsplash.com/photo-1670201203295-172ff07b1cf8?w=800&auto=format&fit=crop'
   },
   6: {
     title: 'Niacinamide Balancing Serum',
     category: 'Serums',
     price: '$48.00',
     desc: '10% niacinamide that minimises pores and controls excess sebum.',
-    image: 'assets/images/product-2.jpg'
+    image: 'https://images.unsplash.com/photo-1629732097571-b042b35aa3ed?w=800&auto=format&fit=crop'
   },
   7: {
     title: 'Hyaluronic Acid Plumping Serum',
     category: 'Serums',
     price: '$68.00',
     desc: 'Triple weight hyaluronic acid that plumps from surface to dermis.',
-    image: 'assets/images/product-3.jpg'
+    image: 'https://images.unsplash.com/photo-1746227638992-50b1e1e0d96b?w=800&auto=format&fit=crop'
   },
   8: {
     title: 'Growth Factor Eye Cream',
     category: 'Eye Care',
     price: '$110.00',
     desc: 'EGF complex that visibly reduces fine lines around the eye area.',
-    image: 'assets/images/product-4.jpg'
+    image: 'https://images.unsplash.com/photo-1670201203295-172ff07b1cf8?w=800&auto=format&fit=crop'
   }
 };
 
