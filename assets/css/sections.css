@@ -12,6 +12,9 @@
 
 .collection-hero {
   background-color: var(--color-primary);
+  background-image: linear-gradient(rgba(26, 26, 46, 0.75), rgba(26, 26, 46, 0.85)), url('https://images.unsplash.com/photo-1629732097571-b042b35aa3ed?w=1400&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
   padding: var(--space-4xl) 0;
   position: relative;
   overflow: hidden;
@@ -279,8 +282,8 @@
 
 .product-card__footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--space-sm);
   margin-top: var(--space-sm);
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-border);
@@ -290,12 +293,13 @@
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
-}
-
+   
 .product-card__atc {
   font-size: var(--font-size-xs);
   padding: var(--space-sm) var(--space-md);
+  width: 100%;
 }
+
 
 
 /* ================================================
@@ -819,6 +823,30 @@
   .collection-layout__inner {
     grid-template-columns: 1fr;
   }
+
+}
+
+@media (max-width: 768px) {
+
+  .sticky-atc {
+    padding: var(--space-sm) 0;
+  }
+
+  .sticky-atc__image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sticky-atc__price {
+    font-size: var(--font-size-base);
+  }
+
+  .sticky-atc__actions .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-xs);
+  }
+
+}
 
   .filter-sidebar {
     position: static;
